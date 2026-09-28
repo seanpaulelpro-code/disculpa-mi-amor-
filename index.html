@@ -1,0 +1,593 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Nathy ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#ffdce8;
+    color:#111111;
+    overflow:hidden;
+}
+
+/* CORAZONES */
+
+.corazon{
+    position:fixed;
+    bottom:-60px;
+    color:#e85d88;
+    opacity:0.25;
+    pointer-events:none;
+    animation:flotar linear infinite;
+    z-index:0;
+}
+
+@keyframes flotar{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.25;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+
+/* SECCIONES */
+
+.seccion{
+    position:absolute;
+    width:100%;
+    height:100vh;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    z-index:2;
+}
+
+.seccion.activa{
+    display:flex;
+}
+
+
+/* TARJETA */
+
+.caja{
+    width:100%;
+    max-width:850px;
+
+    max-height:88vh;
+
+    overflow-y:auto;
+
+    background:#ffffff;
+
+    color:#111111;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    border:2px solid #f3a8bd;
+
+    box-shadow:0 10px 35px rgba(0,0,0,0.18);
+
+    text-align:center;
+
+    animation:entrada 0.6s ease;
+}
+
+@keyframes entrada{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* TITULOS */
+
+h1{
+    color:#d6336c;
+    font-size:32px;
+    margin-bottom:25px;
+}
+
+
+/* TEXTO */
+
+p{
+    color:#111111;
+    font-size:18px;
+    line-height:1.8;
+    text-align:left;
+}
+
+
+/* BOTONES */
+
+button{
+    border:none;
+    border-radius:30px;
+
+    padding:14px 30px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    margin-top:30px;
+
+    transition:transform 0.2s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+
+/* BOTÓN SÍ */
+
+.si{
+    background:#d6336c;
+    color:#ffffff;
+}
+
+
+/* BOTÓN CONTINUAR */
+
+.siguiente{
+    background:#ffb3c8;
+    color:#111111;
+}
+
+
+/* BOTÓN NO */
+
+#noBtn{
+    position:absolute;
+
+    background:#333333;
+    color:#ffffff;
+
+    z-index:10;
+}
+
+
+/* SCROLL */
+
+.caja::-webkit-scrollbar{
+    width:8px;
+}
+
+.caja::-webkit-scrollbar-track{
+    background:#eeeeee;
+}
+
+.caja::-webkit-scrollbar-thumb{
+    background:#d6336c;
+    border-radius:10px;
+}
+
+
+/* CELULAR */
+
+@media(max-width:600px){
+
+    .caja{
+        padding:25px;
+        max-height:90vh;
+    }
+
+    h1{
+        font-size:27px;
+    }
+
+    p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    button{
+        font-size:16px;
+        padding:12px 25px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- CORAZONES DE FONDO -->
+
+<script>
+
+for(let i=0;i<20;i++){
+
+    const corazon=document.createElement("div");
+
+    corazon.className="corazon";
+
+    corazon.innerHTML="❤️";
+
+    corazon.style.left=Math.random()*100+"%";
+
+    corazon.style.fontSize=(14+Math.random()*20)+"px";
+
+    corazon.style.animationDuration=(7+Math.random()*8)+"s";
+
+    corazon.style.animationDelay=Math.random()*8+"s";
+
+    document.body.appendChild(corazon);
+}
+
+</script>
+
+
+
+<!-- ============================== -->
+<!-- INICIO -->
+<!-- ============================== -->
+
+<section class="seccion activa" id="inicio">
+
+    <div class="caja">
+
+        <h1>Para Nathy ❤️</h1>
+
+        <p style="text-align:center;">
+
+            Amor, hice esto porque quería que leyeras algo importante.
+
+        </p>
+
+        <button
+            class="si"
+            onclick="mostrar('disculpa')">
+
+            Abrir carta ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================== -->
+<!-- DISCULPA -->
+<!-- ============================== -->
+
+<section class="seccion" id="disculpa">
+
+    <div class="caja">
+
+        <h1>Perdón, amor 🥺</h1>
+
+        <p>
+
+            Amor, perdón si te hice sentir mal con lo que te dije. Perdón, sé que no debí decírtelo de esa manera y de verdad me sentí muy mal por eso. Por eso quise hacer esto para poder disculparme bien contigo.
+
+            <br><br>
+
+            También quiero decirte algo y espero que no te lo tomes a mal. Antes ya te había comentado que prefería no saber mucho sobre tu pasado en lo que respecta a tus parejas, porque, como te digo siempre, yo pienso demasiado las cosas y hasta podría decir que soy algo inseguro.
+
+            <br><br>
+
+            Cuando hablaste de que salías con otro chico y que te llevaba a lugares caros y cosas así, me bajoneé bastante y me sentí muy mal. Pero no es tu culpa, porque seguramente lo comentaste sin darte cuenta, así como a veces yo también digo cosas sin pensar. No te culpo por eso ni mucho menos.
+
+            <br><br>
+
+            Aun así, nada de eso justifica la forma en la que te hablé. Por eso quiero pedirte perdón de corazón. No estuvo bien y sé que merecías que te hablara de una mejor manera.
+
+            <br><br>
+
+            Y ahora solo quiero hacerte una pregunta. Aunque creo que ya sé la respuesta... porque literalmente es imposible poner la opción de que no. Si quieres, inténtalo y me río. JAJAJA ❤️
+
+        </p>
+
+        <button
+            class="siguiente"
+            onclick="mostrar('pregunta')">
+
+            Continuar ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================== -->
+<!-- PREGUNTA DEL PERDÓN -->
+<!-- ============================== -->
+
+<section class="seccion" id="pregunta">
+
+    <div class="caja">
+
+        <h1>
+            ¿Sí me perdonas, mi amor? 🥺❤️
+        </h1>
+
+        <p style="text-align:center;">
+
+            Piénsalo bien... 👀
+
+        </p>
+
+        <button
+            class="si"
+            onclick="mostrar('sabia')">
+
+            Sí ❤️
+
+        </button>
+
+        <button id="noBtn">
+
+            No 😒
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================== -->
+<!-- RESPUESTA -->
+<!-- ============================== -->
+
+<section class="seccion" id="sabia">
+
+    <div class="caja">
+
+        <h1>
+            JAJAJA 😌❤️
+        </h1>
+
+        <p style="text-align:center;">
+
+            Yo sabía que ibas a decir que sí, mi amor JAJAJA ❤️
+
+        </p>
+
+        <button
+            class="si"
+            onclick="mostrar('amor')">
+
+            Siguiente ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================== -->
+<!-- CARTA DE AMOR -->
+<!-- ============================== -->
+
+<section class="seccion" id="amor">
+
+    <div class="caja">
+
+        <h1>
+            Para ti, mi amor ❤️
+        </h1>
+
+        <p>
+
+            AMOR, te amo, te amo, te amo. Y no es solo decirlo, es realmente sentirlo hasta lo más profundo de mi alma. Mira, yo no sé expresarme muy bien con lo que siento, pero igual aprovecho este momento para poder decirte todo lo que siento, aunque las palabras no son suficientes para explicarlo.
+
+            <br><br>
+
+            Te amo demasiado, eres literalmente la cosa más bonita que Dios puso en mi camino, eres mi cielo entero hecho persona, eres, no sé, cada estrella, cada rayito de sol, cada gota de lluvia bonita; en resumen, TODO ERES TÚ.
+
+            <br><br>
+
+            Antes de ti mi vida era una mrd, era como un silencio, y llegaste tú y le pusiste música, colores, magia y un amor tan grande que no me llega a caber en el pecho; literal, se me desborda todo, todo el tiempo pensando en ti.
+
+            <br><br>
+
+            No te quiero solo para hoy, ni para mañana, ni para unos años... TE QUIERO PARA SIEMPRE, PARA TODA LA ETERNIDAD, AQUÍ Y EN EL CIELO, EN ESTA VIDA Y EN MIL VIDAS MÁS.
+
+            <br><br>
+
+            Si me dieran a elegir mil veces dónde estar, mil veces elegiría tus brazos, porque ahí es donde mi alma descansa, ahí es donde pertenezco, ahí es donde soy realmente FELIZ DE VERDAD.
+
+            <br><br>
+
+            Eres mi amor, mi vida, mi todoooooooooo... y si me preguntan qué es lo más hermoso que tengo en la vida, siempre gritaré tu nombre, porque TÚ ERES MI AMOR MÁS GRANDE, MÁS PURO Y MÁS VERDADERO, Y NADA NI NADIE PODRÁ SEPARARNOS NUNCAAA, PORQUE MI CORAZÓN YA ES TUYO, COMPLETAMENTE TUYO, Y SERÁ TUYO PARA SIEMPRE Y PARA SIEMPRE Y PARA SIEMPREEEEEEEEEE.
+
+            <br><br>
+
+            TE AMO HERMOSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
+
+            <br><br>
+
+            Y aunque sé que decirte todo esto no sé cómo decirlo, pero es como que si ya fuéramos novios o algo así, aunque todavía no lo somos JAJAJA. Pero igual te tengo algo preparado, aunque no te diré nada más porque tiene que ser sorpresa.
+
+            <br><br>
+
+            JIJIJIJA ❤️
+
+        </p>
+
+
+        <button
+            class="si"
+            onclick="mostrar('final')">
+
+            ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================== -->
+<!-- FINAL -->
+<!-- ============================== -->
+
+<section class="seccion" id="final">
+
+    <div class="caja">
+
+        <h1>
+            ❤️
+        </h1>
+
+        <p style="text-align:center;">
+
+            Gracias por leer todo esto, amor.
+
+            <br><br>
+
+            Te amo muchísimo. ❤️
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+
+/* CAMBIAR DE PÁGINA */
+
+function mostrar(id){
+
+    document.querySelectorAll(".seccion").forEach(function(seccion){
+
+        seccion.classList.remove("activa");
+
+    });
+
+    document.getElementById(id).classList.add("activa");
+
+}
+
+
+
+/* BOTÓN NO */
+
+const noBtn = document.getElementById("noBtn");
+
+
+function moverNo(){
+
+    const margen = 20;
+
+    const maxX =
+        window.innerWidth -
+        noBtn.offsetWidth -
+        margen;
+
+    const maxY =
+        window.innerHeight -
+        noBtn.offsetHeight -
+        margen;
+
+    const x =
+        margen +
+        Math.random() *
+        Math.max(1, maxX - margen);
+
+    const y =
+        margen +
+        Math.random() *
+        Math.max(1, maxY - margen);
+
+    noBtn.style.left = x + "px";
+
+    noBtn.style.top = y + "px";
+
+}
+
+
+/* PC */
+
+noBtn.addEventListener(
+    "mouseover",
+    moverNo
+);
+
+
+/* CELULAR */
+
+noBtn.addEventListener(
+    "touchstart",
+    function(event){
+
+        event.preventDefault();
+
+        moverNo();
+
+    }
+);
+
+
+/* CLICK */
+
+noBtn.addEventListener(
+    "click",
+    function(){
+
+        moverNo();
+
+    }
+);
+
+
+</script>
+
+
+</body>
+</html>
+```
